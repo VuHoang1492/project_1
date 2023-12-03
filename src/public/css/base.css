@@ -11,6 +11,8 @@
 
         --light-loading-color: #9f9f9f;
         --dark-loading-color: #fff;
+
+        --warning: #cc3300;
     }
 
     body {

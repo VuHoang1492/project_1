@@ -62,7 +62,7 @@ const makeBookCard = (books) => {
 
 
         const detail = document.createElement('a')
-        detail.href = 'a'
+        detail.href = `/book?id=${book.id}`
         detail.classList.add('detail')
         detail.innerText = 'Detail'
         infoDiv.appendChild(detail)

@@ -1,5 +1,5 @@
 import express from 'express'
-import homeController from '../controller/home_controller'
+import webController from '../controller/web_controller'
 
 const route = express.Router()
 
@@ -7,7 +7,8 @@ const route = express.Router()
 route.get('/', (req, res) => {
     res.redirect('/home')
 })
-route.get('/home', homeController)
+route.get('/home', webController.homeController)
+route.get('/book', webController.bookDetailController)
 
 
 export default route
