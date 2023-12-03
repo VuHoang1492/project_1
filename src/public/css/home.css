@@ -1,0 +1,135 @@
+.wrap {
+    padding-top: 64px;
+    height: 100%;
+
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    padding-top: 128px;
+
+    background-color: var(--light-background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subject {
+    width: 100%;
+    min-height: 300px;
+    margin-bottom: 64px;
+
+}
+
+.subject-title {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0 64px;
+    transition: all .2s ease-in;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.subject-content {
+    position: relative;
+    margin: 8px 64px;
+}
+
+.loading {
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+
+.list-book {
+    display: flex;
+    gap: 64px;
+    flex-direction: row;
+    padding: 64px;
+    overflow-x: auto;
+}
+
+.list-book::-webkit-scrollbar {
+    background: transparent;
+    width: 3px;
+    height: 3px;
+}
+
+.list-book::-webkit-scrollbar-thumb {
+    background: var(--light-loading-color);
+}
+
+
+
+.book {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 32px;
+    border-radius: 32px;
+    transition: all .2s ease-in;
+}
+
+.thumnail {
+    margin-right: 16px;
+    border-radius: 5px;
+    transform: translate(0, -70px) scale(0.8);
+    transition: all .2s ease-in;
+    width: 128px;
+}
+
+.info-book {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+}
+
+.book-name {
+
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.author-name {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    transition: all .2s ease-in;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.author-name:hover {
+    font-size: 20px;
+    color: red;
+}
+
+.detail {
+    color: inherit;
+    transition: all .2s ease-in;
+    font-size: 16px;
+}
+
+.detail:hover {
+    font-size: 20px;
+    color: blue;
+}
+
+.book:hover {
+    transform: translateY(-16px);
+    box-shadow: 1px 1px 8px 1px #999;
+}
+
+.thumnail:hover {
+    transform: scale(1) translate(0, -70px);
+    box-shadow: 1px 1px 8px 1px #999;
+}

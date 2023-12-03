@@ -2,5 +2,5 @@
     "watch": [
         "src/*"
     ],
-    "ext": "js,ejs"
+    "ext": "js,ejs,css,scss"
 }

@@ -3,32 +3,89 @@
 
 <head>
     <%- include('../partials/head')%>
-        <link href="http://getbootstrap.com/examples/offcanvas/offcanvas.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/home.css">
+        <script defer src="/js/home.js"></script>
 </head>
 
 <body>
     <%- include ('../partials/header') %>
-        <div class="container">
-            <div class="row row-offcanvas row-offcanvas-right">
-                <div class="col-xs-12 col-sm-9">
-                    <p class="pull-right visible-xs">
-                        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-                    </p>
-                    <div class="jumbotron">
-                        <h1>Hello world!</h1>
-                        <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try
-                            some responsive-range viewport sizes to see it in action.</p>
+        <div class="wrap">
+
+            <div class="content">
+                <div class="subject" id="education">
+                    <div class="subject-title"><span> Giáo Dục :</span><a><span>Xem thêm</span></a></div>
+                    <div class="subject-content">
+                        <div class="loading">
+                            <div class="lds-ellipsis">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+                <div class="subject" id="novels">
+                    <div class="subject-title"><span>Tiểu Thuyết :</span><a><span>Xem thêm</span></a></div>
+                    <div class="subject-content">
+                        <div class="loading">
+                            <div class="lds-ellipsis">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
 
-                <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-                    <%- include ('../partials/sidebar') %>
+                    </div>
+                </div>
+                <div class="subject" id="cooking">
+                    <div class="subject-title"><span>Nấu Ăn :</span><a><span>Xem thêm</span></a></div>
+                    <div class="subject-content">
+                        <div class="loading">
+                            <div class="lds-ellipsis">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="subject" id="travel">
+                    <div class="subject-title"><span>Du Lịch :</span><a><span>Xem thêm</span></a></div>
+                    <div class="subject-content">
+                        <div class="loading">
+                            <div class="lds-ellipsis">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="subject" id="manga">
+                    <div class="subject-title"><span>Truyện Tranh :</span><a><span>Xem thêm</span></a></div>
+                    <div class="subject-content">
+                        <div class="loading">
+                            <div class="lds-ellipsis">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <%- include ('../partials/footer') %>
+
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+        <%- include ('../partials/footer') %>
 </body>
 
 </html>
