@@ -3,7 +3,7 @@
 
 <head>
     <%- include('../partials/head')%>
-        <link rel="stylesheet" href="/css/not_found.css">
+        <link rel="stylesheet" href="/css/error.css">
 </head>
 
 <body>
@@ -12,7 +12,9 @@
 
             <div class="content">
                 <i class="bi bi-emoji-frown"></i>
-                <span>Không tìm thấy mã sách này </span>
+                <span>
+                    <%= mes %>
+                </span>
                 <a href="/home"><span>Trở về trang chủ</span></a>
             </div>
 

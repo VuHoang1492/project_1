@@ -3,3 +3,4 @@ const bookUrl = 'https://www.googleapis.com/books/v1/volumes'
 
 
 const loadingHtml = ' <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>'
+

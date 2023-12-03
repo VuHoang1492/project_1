@@ -6,7 +6,7 @@ const travelCard = document.querySelector('#travel')
 
 
 function getBook(subjectCard, tag, country, startIndex, maxResults) {
-    axios.get(`${bookUrl}?q=subject:${tag}&orderBy=newest&maxResults=10${country ? '&langRestrict=country' : ''} `)
+    axios.get(`${bookUrl}?q=subject:${tag}&orderBy=newest&maxResults=10${country ? `&langRestrict=${country}` : ''} `)
         .then(res => {
             const loading = subjectCard.querySelector('.loading')
             const content = subjectCard.querySelector('.subject-content')
@@ -64,7 +64,7 @@ const makeBookCard = (books) => {
         const detail = document.createElement('a')
         detail.href = `/book?id=${book.id}`
         detail.classList.add('detail')
-        detail.innerText = 'Detail'
+        detail.innerText = 'Chi tiết >>'
         infoDiv.appendChild(detail)
 
         bookDiv.appendChild(infoDiv)
@@ -77,8 +77,8 @@ const makeBookCard = (books) => {
     return card
 }
 
-getBook(educationCard, 'Education')
+getBook(educationCard, 'Education', 'vi')
 getBook(novelCard, 'Novel')
 getBook(mangaCard, 'Manga', 'vn')
 getBook(cookingCard, 'Cooking', 'vi')
-getBook(travelCard, 'Travel')
+getBook(travelCard, 'Travel', 'vi')

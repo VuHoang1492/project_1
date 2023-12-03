@@ -140,3 +140,9 @@
     .dark .list-book::-webkit-scrollbar-thumb {
         background: var(--dark-loading-color);
     }
+
+    .dark .book-description {
+
+        border-top: solid 1px var(--dark-loading-color);
+
+    }
