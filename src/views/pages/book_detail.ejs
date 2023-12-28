@@ -48,11 +48,17 @@
                             <%=book.volumeInfo.publishedDate%>
                         </span>
                     </div>
+                    <div id="book-page-count">
+                        <span class="sub-title">Số trang: </span>
+                        <span class="sub-content">
+                            <%=book.volumeInfo.pageCount%>
+                        </span>
+                    </div>
 
                     <% if (book.saleInfo.saleability==="NOT_FOR_SALE" ) { %>
                         <div id="book-sales">
 
-                            <span class="sub-title">Giá bán: </span>
+                            <span class="sub-title">Giá thành: </span>
                             <span class="sub-content">
                                 Không bán tại Việt Nam
                             </span>
@@ -61,7 +67,7 @@
                         <% } else { %>
                             <div id="book-sales">
 
-                                <span class="sub-title">Giá bán: </span>
+                                <span class="sub-title">Giá thành: </span>
                                 <span class="sub-content">
                                     <%= book.saleInfo.retailPrice.amount%>
                                         <%= book.saleInfo.retailPrice.currencyCode%>
@@ -78,9 +84,10 @@
                             <% } %>
                                 <div id="book-preview">
                                     <span class="sub-title">Xem trước: </span>
-                                    <a href="<%= book.accessInfo.webReaderLink%>" target="_blank"> <span
-                                            class="sub-content">Xem trước một
-                                            phần</span></a>
+                                    <a href="<%= book.accessInfo.webReaderLink%>" target="_blank">
+                                        <span class="sub-content">Xem trước
+                                        </span>
+                                    </a>
 
                                 </div>
                 </div>

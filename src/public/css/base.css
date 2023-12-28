@@ -13,12 +13,19 @@
         --dark-loading-color: #fff;
 
         --warning: #cc3300;
+
+        --font-size-small: 16px;
+        --font-size-large: 30px;
+        --font-size-title-small: 32px;
+        --font-size-title-large: 48px;
     }
 
     body {
         box-sizing: border-box;
         font-family: "Roboto";
         position: relative;
+
+
     }
 
 
@@ -47,7 +54,11 @@
         position: fixed;
         color: var(--light-text-nav-color);
         background: var(--light-background-narbar);
+        transition: all .2s ease-in-out;
     }
+
+
+
 
     .navbar .nav-link {
 
@@ -65,10 +76,35 @@
 
     .search-control {
         position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 16px;
     }
 
+    .search-control select {
+        width: 128px;
+        height: 32px;
+        border-radius: 5px;
+        font-size: 16px;
+        padding: 0 16px;
+        border: none;
+        outline: 0;
+        box-shadow: none;
+        border: 0 !important;
+        background: var(--light-background-color);
+        color: var(--light-loading-color);
+        cursor: pointer;
+    }
+
+
+
+
+
+
+
     .search-control .input-search {
-        width: 300px;
+        width: 256px;
         height: 32px;
         border-radius: 16px;
         font-size: 16px;
@@ -108,6 +144,31 @@
         border: 2px var(--light-text-nav-color) solid;
     }
 
+
+    @media only screen and (max-width: 1120px) {
+        .navbar {
+            height: 128px;
+        }
+
+        .search-control select {
+            height: 64px;
+            font-size: 20px;
+        }
+
+        .search-control .input-search {
+            height: 64px;
+            font-size: 20px;
+        }
+
+        .search-control i {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 16px;
+        }
+
+    }
+
     /* dark themes*/
 
     .dark {
@@ -144,5 +205,13 @@
     .dark .book-description {
 
         border-top: solid 1px var(--dark-loading-color);
+
+    }
+
+    .dark .search-control select {
+
+
+        background: var(--dark-background-color);
+        color: var(--dark-loading-color);
 
     }

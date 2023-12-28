@@ -20,4 +20,10 @@ const bookDetailController = (req, res) => {
     }
 }
 
-export default { homeController, bookDetailController }
+const filterController = (req, res) => {
+    res.render('pages/filter')
+}
+
+
+
+export default { homeController, bookDetailController, filterController }

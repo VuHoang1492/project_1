@@ -9,8 +9,13 @@
     </a>
 
     <div class="search-control">
-        <i class="bi bi-search"></i>
-        <input type="text" class="input-search">
+        <select id="filterSelect" name="filterBy">
+            <option value="name" selected>Tên</option>
+            <option value="author">Tác giả</option>
+            <option value="publisher">NXB</option>
+        </select>
+        <i class="bi bi-search" id="searchBtn"></i>
+        <input type="text" class="input-search" id="searchInput">
     </div>
     <i class="bi bi-brightness-high-fill change-theme"></i>
 </nav>

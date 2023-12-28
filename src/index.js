@@ -4,7 +4,7 @@ import path from 'path';
 import configViewEngine from "./config/config_view_engine";
 import webRoute from './route/web_routes'
 
-import axios from 'axios'
+
 
 let app = express();
 

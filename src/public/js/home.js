@@ -1,21 +1,6 @@
-const educationCard = document.querySelector('#education')
-const novelCard = document.querySelector('#novels')
-const mangaCard = document.querySelector('#manga')
-const cookingCard = document.querySelector('#cooking')
-const travelCard = document.querySelector('#travel')
 
 
-function getBook(subjectCard, tag, country, startIndex, maxResults) {
-    axios.get(`${bookUrl}?q=subject:${tag}&orderBy=newest&maxResults=10${country ? `&langRestrict=${country}` : ''} `)
-        .then(res => {
-            const loading = subjectCard.querySelector('.loading')
-            const content = subjectCard.querySelector('.subject-content')
-            console.log(res.data);
-            const card = makeBookCard(res.data.items)
-            content.removeChild(loading)
-            content.appendChild(card)
-        })
-}
+
 
 
 const makeBookCard = (books) => {
@@ -77,8 +62,16 @@ const makeBookCard = (books) => {
     return card
 }
 
-getBook(educationCard, 'Education', 'vi')
-getBook(novelCard, 'Novel')
-getBook(mangaCard, 'Manga', 'vn')
-getBook(cookingCard, 'Cooking', 'vi')
-getBook(travelCard, 'Travel', 'vi')
+window.addEventListener('load', () => {
+    const educationCard = document.querySelector('#education')
+    const novelCard = document.querySelector('#novels')
+    const mangaCard = document.querySelector('#manga')
+    const cookingCard = document.querySelector('#cooking')
+    const travelCard = document.querySelector('#travel')
+    getBook(educationCard, 'Education', 'vi')
+    getBook(novelCard, 'Novel')
+    getBook(mangaCard, 'Manga', 'vn')
+    getBook(cookingCard, 'Cooking', 'vi')
+    getBook(travelCard, 'Travel', 'vi')
+})
+

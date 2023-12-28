@@ -36,22 +36,26 @@
 
 .sub-title {
     font-style: italic;
-    font-size: 20px;
+    font-size: var(--font-size-small);
     margin-right: 8px;
     text-decoration: underline;
+    transition: all .2s ease-in-out;
 }
 
 .sub-content {
-    font-size: 20px;
+    font-size: var(--font-size-small);
     font-weight: 500;
+    transition: all .2s ease-in-out;
 }
 
 #book-title {
-    font-size: 28px;
+    font-size: var(--font-size-title-small);
     font-weight: 900;
+    transition: all .2s ease-in-out;
 }
 
 .book-description {
+    font-size: var(--font-size-small);
     margin: 0 64px;
     padding: 32px;
     border-top: solid 1px var(--light-loading-color);
@@ -60,6 +64,7 @@
     flex-direction: column;
     gap: 8px;
     text-align: justify;
+    transition: all .2s ease-in-out;
 }
 
 @media only screen and (max-width: 1120px) {
@@ -69,11 +74,9 @@
     }
 
     .thumbnail {
-        width: 200px;
-        margin-top: 64px;
+        width: 300px;
+        margin-top: 128px;
         align-self: center;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        transition: all .2s ease-in-out;
     }
 
     .info-book {
@@ -81,23 +84,38 @@
         flex-direction: column;
         margin: auto;
         gap: 16px;
-        width: 60%;
+        width: 80%;
         margin-bottom: 64px;
+
     }
 
     #book-title {
-        font-size: 28px;
+        font-size: var(--font-size-title-large);
         font-weight: 900;
         text-align: center;
-        margin-bottom: 16px;
+        margin: 32px auto;
+
+    }
+
+    .sub-content {
+        font-size: var(--font-size-large);
+    }
+
+    .sub-title {
+        font-size: var(--font-size-large);
     }
 
     .book-description {
-        width: 60%;
+        font-size: var(--font-size-large);
+        width: 90%;
         margin: auto;
         padding: 32px;
         border-top: solid 1px var(--light-loading-color);
+    }
+}
 
-
+@media only screen and (max-width: 1120px) {
+    .wrap {
+        padding-top: 128px;
     }
 }
