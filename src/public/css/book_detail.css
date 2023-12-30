@@ -1,22 +1,14 @@
-.wrap {
-    padding-top: 64px;
-    min-height: 100vh;
-
-}
-
-.content {
-    width: 100%;
-    height: 100%;
-    padding-bottom: 128px;
-    background-color: var(--light-background-color);
+/*css book detial page*/
+.wrap-main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .thumbnail {
-    width: 300px;
     margin: 64px 128px;
+    width: 192px;
     align-self: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: all .2s ease-in-out;
@@ -29,9 +21,10 @@
 .info-book {
     display: flex;
     flex-direction: column;
-    margin: 128px 0;
+    margin: 64px 0;
     gap: 16px;
     width: 50%;
+    color: var(--text-color);
 }
 
 .sub-title {
@@ -58,7 +51,8 @@
     font-size: var(--font-size-small);
     margin: 0 64px;
     padding: 32px;
-    border-top: solid 1px var(--light-loading-color);
+    color: var(--text-color);
+    border-top: solid 1px var(--primary-color);
     text-indent: 50px;
     display: flex;
     flex-direction: column;
@@ -111,11 +105,5 @@
         margin: auto;
         padding: 32px;
         border-top: solid 1px var(--light-loading-color);
-    }
-}
-
-@media only screen and (max-width: 1120px) {
-    .wrap {
-        padding-top: 128px;
     }
 }

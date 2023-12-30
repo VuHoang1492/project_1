@@ -4,88 +4,115 @@
 <head>
     <%- include('../partials/head')%>
         <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/book.css">
         <script src="/js/home.js"></script>
 </head>
 
 <body>
-    <%- include ('../partials/header') %>
-        <div class="wrap">
+    <div class="container">
+        <%- include ('../partials/sider') %>
 
-            <div class="content">
-                <div class="subject" id="education">
-                    <div class="subject-title"><span> Giáo Dục :</span><a><span>Xem thêm</span></a></div>
-                    <div class="subject-content">
-                        <div class="loading">
-                            <div class="lds-ellipsis">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                        </div>
+            <div class="wrap">
+                <div id="search" class="search-box">
+
+                    <input type="search" placeholder="Tìm kiếm...">
+                    <i class="bx bx-search"></i>
+                </div>
+
+                <div class="filter-box">
+                    <div>
+                        <input id="name" type="radio" value="name" name="filter" checked>
+                        <label for="name"><span class="text">Tên</span></label>
+
+                    </div>
+                    <div>
+                        <input id="author" type="radio" value="author" name="filter">
+                        <label for="author"><span class="text">Tác giả</span></label>
+
+                    </div>
+                    <div>
+                        <input id="pulisher" type="radio" value="pulisher" name="filter">
+                        <label for="pulisher"><span class="text">Nhà xuất bản</span></label>
 
                     </div>
                 </div>
-                <div class="subject" id="novels">
-                    <div class="subject-title"><span>Tiểu Thuyết :</span><a><span>Xem thêm</span></a></div>
-                    <div class="subject-content">
-                        <div class="loading">
-                            <div class="lds-ellipsis">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                        </div>
 
+                <div class="content">
+                    <div class="subject" id="education">
+                        <div class="subject-title"><span> Giáo Dục :</span><a><span>Xem thêm</span></a></div>
+                        <div class="subject-content">
+                            <div class="loading">
+                                <div class="lds-ellipsis">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="subject" id="novels">
+                        <div class="subject-title"><span>Tiểu Thuyết :</span><a><span>Xem thêm</span></a></div>
+                        <div class="subject-content">
+                            <div class="loading">
+                                <div class="lds-ellipsis">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="subject" id="cooking">
+                        <div class="subject-title"><span>Nấu Ăn :</span><a><span>Xem thêm</span></a></div>
+                        <div class="subject-content">
+                            <div class="loading">
+                                <div class="lds-ellipsis">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="subject" id="travel">
+                        <div class="subject-title"><span>Du Lịch :</span><a><span>Xem thêm</span></a></div>
+                        <div class="subject-content">
+                            <div class="loading">
+                                <div class="lds-ellipsis">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="subject" id="manga">
+                        <div class="subject-title"><span>Truyện Tranh :</span><a><span>Xem thêm</span></a></div>
+                        <div class="subject-content">
+                            <div class="loading">
+                                <div class="lds-ellipsis">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <div class="subject" id="cooking">
-                    <div class="subject-title"><span>Nấu Ăn :</span><a><span>Xem thêm</span></a></div>
-                    <div class="subject-content">
-                        <div class="loading">
-                            <div class="lds-ellipsis">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                        </div>
 
-                    </div>
-                </div>
-                <div class="subject" id="travel">
-                    <div class="subject-title"><span>Du Lịch :</span><a><span>Xem thêm</span></a></div>
-                    <div class="subject-content">
-                        <div class="loading">
-                            <div class="lds-ellipsis">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="subject" id="manga">
-                    <div class="subject-title"><span>Truyện Tranh :</span><a><span>Xem thêm</span></a></div>
-                    <div class="subject-content">
-                        <div class="loading">
-                            <div class="lds-ellipsis">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
             </div>
+    </div>
 
-        </div>
-        <%- include ('../partials/footer') %>
 </body>
 
 </html>

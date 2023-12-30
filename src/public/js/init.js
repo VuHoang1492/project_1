@@ -22,24 +22,24 @@ const filter = document.querySelector('#filterSelect')
 const searchBtn = document.querySelector('#searchBtn')
 const searchInput = document.querySelector('#searchInput')
 
-searchBtn.addEventListener('click', () => {
-    const value = searchInput.value
-    const name = filter.value
-    if (value.length == 0 || !value.replace(/\s/g, '').length) {
-        alert('Tìm kiếm không hợp lệ')
-        return
-    }
-    window.location = `search?${name}=${value}`
-})
+// searchBtn.addEventListener('click', () => {
+//     const value = searchInput.value
+//     const name = filter.value
+//     if (value.length == 0 || !value.replace(/\s/g, '').length) {
+//         alert('Tìm kiếm không hợp lệ')
+//         return
+//     }
+//     window.location = `search?${name}=${value}`
+// })
 
-searchInput.addEventListener('keypress', (e) => {
-    if (e.key === "Enter") {
-        const value = searchInput.value
-        const name = filter.value
-        if (value.length == 0 || !value.replace(/\s/g, '').length) {
-            alert('Tìm kiếm không hợp lệ')
-            return
-        }
-        window.location = `search?${name}=${value}`
-    }
-})
+// searchInput.addEventListener('keypress', (e) => {
+//     if (e.key === "Enter") {
+//         const value = searchInput.value
+//         const name = filter.value
+//         if (value.length == 0 || !value.replace(/\s/g, '').length) {
+//             alert('Tìm kiếm không hợp lệ')
+//             return
+//         }
+//         window.location = `search?${name}=${value}`
+//     }
+// })
