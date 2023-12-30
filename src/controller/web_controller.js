@@ -1,8 +1,10 @@
 import ISO6391 from 'iso-639-1'
 import bookService from "../service/book_service";
+import categories from '../data/category';
 
 const homeController = (req, res) => {
-    res.render('pages/index');
+
+    res.render('pages/index', { categories: categories });
 }
 const bookDetailController = (req, res) => {
     const bookId = req.query.id

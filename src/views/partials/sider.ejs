@@ -8,12 +8,13 @@
         </div>
 
     </header>
-    <i class='bx bx-chevron-left toggle'></i>
+
+    <i class="fa-solid fa-caret-right toggle"></i>
     <div class="menu">
         <li class="nav-link">
             <a href="/home#search">
-                <i class=" icon bx bx-search"></i>
-                <span class="text">Tìm kiếm</span>
+                <i class="icon fa-solid fa-magnifying-glass"></i>
+                <span class="text">Search</span>
             </a>
         </li>
         <div class="divider"></div>
@@ -21,103 +22,18 @@
             CATEGORY
         </span>
         <ul class="menu-links">
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
+            <% categories.forEach(cat=>{%>
+                <li class="nav-link">
+                    <a href="/filter?subject=<%=cat.subject%>">
+                        <i class="icon  <%=cat.icon%>"></i>
+                        <span class="text">
+                            <%=cat.name%>
+                        </span>
+                    </a>
+                </li>
+                <% }) %>
 
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="#">
-                    <i class='icon bx bx-book-alt'></i>
-                    <span class="text">Tiểu thuyết</span>
-                </a>
-            </li>
+
 
         </ul>
     </div>

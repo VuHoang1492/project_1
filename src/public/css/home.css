@@ -144,11 +144,11 @@
 .list-book::-webkit-scrollbar {
     background: transparent;
     width: 3px;
-    height: 3px;
+    height: 10px;
 }
 
 .list-book::-webkit-scrollbar-thumb {
-    background: var(--light-loading-color);
+    background: var(--primary-color);
 }
 
 
