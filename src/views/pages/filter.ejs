@@ -4,18 +4,51 @@
 <head>
     <%- include('../partials/head')%>
         <link rel="stylesheet" href="/css/filter.css">
-        <script src="/js/filter.js"></script>
+
+
+        <meta name="type" content="<%=type%>">
+        <meta name="param" content="<%=query%>">
+
+        <script defer src="/js/filter.js"></script>
 </head>
 
 <body>
-    <%- include ('../partials/header') %>
-        <div class="wrap">
+    <div class="container">
+        <%- include ('../partials/sider') %>
+            <div class="wrap">
 
-            <div class="content">
+                <div class="content">
+                    <header>
+                        <%if(type==='subject' ){%>
+                            <span class="type">Tìm kiếm theo Thể loại :</span>
+                            <%}else if(type==='intitle' ){%>
+                                <span class="type">Tìm kiếm theo Tên :</span>
+                                <%}else if(type==='inauthor' ){%>
+                                    <span class="type">Tìm kiếm theo Tác giả :</span>
+                                    <%}else if(type==='inpublisher' ){%>
+                                        <span class="type">Tìm kiếm theo Nhà xuất bản :</span>
+                                        <%}%>
+                                            <span class="param">
+                                                <%=query%>
+                                            </span>
+                    </header>
+                    <div class="list-book">
+                        <div class="loading">
+                            <div class="lds-ellipsis">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+    </div>
 
-        </div>
-        <%- include ('../partials/footer') %>
 </body>
+
+
 
 </html>

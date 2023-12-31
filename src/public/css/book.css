@@ -10,6 +10,7 @@
     transition: all .2s ease-in;
     height: 192px;
     color: var(--text-color);
+    min-width: 400px;
 }
 
 .thumnail {
@@ -17,7 +18,7 @@
     border-radius: 5px;
     transform: translate(0, -50px) scale(0.8);
     transition: all .2s ease-in;
-    width: 96px;
+    width: 128px;
 }
 
 .info-book {
@@ -32,7 +33,7 @@
     font-size: var(--font-size-title-small);
     font-weight: bold;
     margin-bottom: 16px;
-    max-width: 200px;
+    max-width: 150px;
     overflow: hidden;
     text-overflow: ellipsis;
 
@@ -44,7 +45,6 @@
     font-weight: 300;
     margin-bottom: 16px;
     transition: all .2s ease-in;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -81,18 +81,28 @@
 
 
     .author-name {
-        font-size: var(--font-size-title-small);
+        font-size: var(--font-mobile-text);
     }
 
     .book-name {
-        font-size: var(--font-size-title-large);
+        font-size: var(--font-mobile-text);
     }
 
     .detail {
-        font-size: var(--font-size-large);
+        font-size: var(--font-mobile-text);
     }
 
     .thumnail {
-        width: 128px;
+        width: 192px;
+    }
+
+    .book {
+
+        height: 256px;
+        min-width: 600px;
+    }
+
+    .book-name {
+        max-width: 320px;
     }
 }

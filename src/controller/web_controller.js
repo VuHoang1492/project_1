@@ -12,18 +12,26 @@ const bookDetailController = (req, res) => {
         bookService.getBookById(bookId).then(response => {
             response.data.volumeInfo.language = ISO6391.getName(response.data.volumeInfo.language)
             console.log(response.data.saleInfo);
-            res.render('pages/book_detail', { book: response.data })
+            res.render('pages/book_detail', { book: response.data, categories: categories })
         }).catch(err => {
             if (err.code == 'ERR_BAD_RESPONSE')
-                res.render('pages/error', { mes: 'KHÔNG TÌM THẤY MÃ SÁCH NÀY' })
+                res.render('pages/error', { mes: 'KHÔNG TÌM THẤY MÃ SÁCH NÀY', categories: categories })
         })
     } else {
-        res.render('pages/error', { mes: 'URL KHÔNG HỢP LỆ' })
+        res.render('pages/error', { mes: 'URL KHÔNG HỢP LỆ', categories: categories })
     }
 }
 
 const filterController = (req, res) => {
-    res.render('pages/filter')
+    const key = Object.keys(req.query)[0]
+    if (['intitle', 'subject', 'inauthor', 'inpublisher'].includes(key)) {
+        const value = req.query[key]
+        res.render('pages/filter', { categories: categories, type: key, query: value })
+    } else {
+        res.render('pages/error', { mes: 'URL KHÔNG HỢP LỆ', categories: categories })
+    }
+
+
 }
 
 

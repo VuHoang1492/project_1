@@ -9,7 +9,7 @@ route.get('/', (req, res) => {
 })
 route.get('/home', webController.homeController)
 route.get('/book', webController.bookDetailController)
-route.get('/search', webController.filterController)
+route.get('/filter', webController.filterController)
 
 
 export default route

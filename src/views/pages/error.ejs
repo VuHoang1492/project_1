@@ -7,19 +7,17 @@
 </head>
 
 <body>
-    <%- include ('../partials/header') %>
-        <div class="wrap">
-
-            <div class="content">
-                <i class="bi bi-emoji-frown"></i>
-                <span>
-                    <%= mes %>
-                </span>
-                <a href="/home"><span>Trở về trang chủ</span></a>
+    <div class="container">
+        <%- include ('../partials/sider') %>
+            <div class="wrap">
+                <div class="content">
+                    <i class="fa-solid fa-face-tired"></i>
+                    <span>
+                        <%= mes %>
+                    </span>
+                </div>
             </div>
-
-        </div>
-        <%- include ('../partials/footer') %>
+    </div>
 </body>
 
 </html>

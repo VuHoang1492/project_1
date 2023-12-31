@@ -12,94 +12,98 @@
             <div class="wrap">
                 <div class="content">
                     <div class="wrap-main">
-                        <img class="thumbnail" src="<%= book.volumeInfo.imageLinks.thumbnail %>">
-                        <div class="info-book">
-                            <div id="book-title">
-                                <span>
-                                    <%=book.volumeInfo.title%>
-                                </span>
-                            </div>
-                            <div id="book-author">
-                                <span class="sub-title">Tác giả: </span>
-                                <span class="sub-content">
-                                    <%=book.volumeInfo.authors%>
-                                </span>
-                            </div>
-                            <div id="book-categories">
-                                <span class="sub-title">Thể loại: </span>
-                                <span class="sub-content">
-                                    <%=book.volumeInfo.categories%>
-                                </span>
-                            </div>
-                            <div id="book-language">
-                                <span class="sub-title">Ngôn ngữ: </span>
-                                <span class="sub-content">
-                                    <%=book.volumeInfo.language%>
-                                </span>
-                            </div>
-                            <div id="book-publisher">
-                                <span class="sub-title">Nhà xuất bản: </span>
-                                <span class="sub-content">
-                                    <%=book.volumeInfo.publisher%>
-                                </span>
-                            </div>
-                            <div id="book-publishedDate">
-                                <span class="sub-title">Ngày xuất bản: </span>
-                                <span class="sub-content">
-                                    <%=book.volumeInfo.publishedDate%>
-                                </span>
-                            </div>
-                            <div id="book-page-count">
-                                <span class="sub-title">Số trang: </span>
-                                <span class="sub-content">
-                                    <%=book.volumeInfo.pageCount%>
-                                </span>
-                            </div>
-
-                            <% if (book.saleInfo.saleability==="NOT_FOR_SALE" ) { %>
-                                <div id="book-sales">
-
-                                    <span class="sub-title">Giá thành: </span>
-                                    <span class="sub-content">
-                                        Không bán tại Việt Nam
-                                    </span>
-
-                                </div>
-                                <% } else { %>
-                                    <div id="book-sales">
-
-                                        <span class="sub-title">Giá thành: </span>
-                                        <span class="sub-content">
-                                            <%= book.saleInfo.retailPrice.amount%>
-                                                <%= book.saleInfo.retailPrice.currencyCode%>
-                                        </span>
-
-                                    </div>
-
-                                    <div id="book-sell">
-                                        <span class="sub-title">Mua ngay: </span>
-                                        <a href="<%= book.saleInfo.buyLink%>" target="_blank"> <span
-                                                class="sub-content">Mua
-                                                ngay</span></a>
-
-                                    </div>
-                                    <% } %>
-                                        <div id="book-preview">
-                                            <span class="sub-title">Xem trước: </span>
-                                            <a href="<%= book.accessInfo.webReaderLink%>" target="_blank">
-                                                <span class="sub-content">Xem trước
-                                                </span>
-                                            </a>
-
+                        <%if( book.volumeInfo.imageLinks){%>
+                            <img class="thumbnail" src="<%=book.volumeInfo.imageLinks.thumbnail %>">
+                            <%}else{%>
+                                <img class="thumbnail" alt="No thumbnail" src="/image/no_cover_thumb.gif">
+                                <%}%>
+                                    <div class="info-book">
+                                        <div id="book-title">
+                                            <span>
+                                                <%=book.volumeInfo.title%>
+                                            </span>
                                         </div>
-                        </div>
-                        <div class="book-description">
-                            <p>
-                                <% myHtmlCode=book.volumeInfo.description %>
+                                        <div id="book-author">
+                                            <span class="sub-title">Tác giả: </span>
+                                            <span class="sub-content">
+                                                <%=book.volumeInfo.authors%>
+                                            </span>
+                                        </div>
+                                        <div id="book-categories">
+                                            <span class="sub-title">Thể loại: </span>
+                                            <span class="sub-content">
+                                                <%=book.volumeInfo.categories%>
+                                            </span>
+                                        </div>
+                                        <div id="book-language">
+                                            <span class="sub-title">Ngôn ngữ: </span>
+                                            <span class="sub-content">
+                                                <%=book.volumeInfo.language%>
+                                            </span>
+                                        </div>
+                                        <div id="book-publisher">
+                                            <span class="sub-title">Nhà xuất bản: </span>
+                                            <span class="sub-content">
+                                                <%=book.volumeInfo.publisher%>
+                                            </span>
+                                        </div>
+                                        <div id="book-publishedDate">
+                                            <span class="sub-title">Ngày xuất bản: </span>
+                                            <span class="sub-content">
+                                                <%=book.volumeInfo.publishedDate%>
+                                            </span>
+                                        </div>
+                                        <div id="book-page-count">
+                                            <span class="sub-title">Số trang: </span>
+                                            <span class="sub-content">
+                                                <%=book.volumeInfo.pageCount%>
+                                            </span>
+                                        </div>
 
-                                    <%- myHtmlCode %>
-                            </p>
-                        </div>
+                                        <% if (book.saleInfo.saleability==="NOT_FOR_SALE" ) { %>
+                                            <div id="book-sales">
+
+                                                <span class="sub-title">Giá thành: </span>
+                                                <span class="sub-content">
+                                                    Không bán tại Việt Nam
+                                                </span>
+
+                                            </div>
+                                            <% } else { %>
+                                                <div id="book-sales">
+
+                                                    <span class="sub-title">Giá thành: </span>
+                                                    <span class="sub-content">
+                                                        <%= book.saleInfo.retailPrice.amount%>
+                                                            <%= book.saleInfo.retailPrice.currencyCode%>
+                                                    </span>
+
+                                                </div>
+
+                                                <div id="book-sell">
+                                                    <span class="sub-title">Mua ngay: </span>
+                                                    <a href="<%= book.saleInfo.buyLink%>" target="_blank"> <span
+                                                            class="sub-content">Mua
+                                                            ngay</span></a>
+
+                                                </div>
+                                                <% } %>
+                                                    <div id="book-preview">
+                                                        <span class="sub-title">Xem trước: </span>
+                                                        <a href="<%= book.volumeInfo.previewLink%>" target="_blank">
+                                                            <span class="sub-content">Xem trước
+                                                            </span>
+                                                        </a>
+
+                                                    </div>
+                                    </div>
+                                    <div class="book-description">
+                                        <p>
+                                            <% myHtmlCode=book.volumeInfo.description %>
+
+                                                <%- myHtmlCode %>
+                                        </p>
+                                    </div>
                     </div>
                 </div>
 

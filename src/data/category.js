@@ -36,6 +36,11 @@ const categories = [
         subject: 'comics'
     },
     {
+        name: 'Education',
+        icon: 'fa-solid fa-school',
+        subject: 'education'
+    },
+    {
         name: 'Engineer',
         icon: 'fa-solid fa-screwdriver-wrench',
         subject: 'engineering'

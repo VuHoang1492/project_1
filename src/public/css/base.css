@@ -2,6 +2,13 @@
 
  :root {
 
+     --font-laptop-title: 24px;
+     --font-mobile-title: 40px;
+     --font-laptop-text: 14px;
+     --font-mobile-text: 32px;
+     --font-laptop-icon: 32px;
+     --font-mobile-icon: 64px;
+     --waring: red;
      /*Color*/
      --body-color: #E4E9E7;
      --siderbar-color: #fff;
@@ -55,7 +62,10 @@
      width: 100%;
      transition: all 0.5s ease;
      padding-left: 64px;
+ }
 
+ .wrap::-webkit-scrollbar {
+     z-index: 0;
  }
 
 
@@ -92,13 +102,13 @@
  .navbar-title {
      min-width: 270px;
      text-align: center;
-     transition: all 0.4s ease;
+     transition: all 0.1s ease;
      opacity: 1;
      white-space: nowrap;
  }
 
  .title {
-     font-size: 24px;
+     font-size: var(--font-laptop-title);
      font-weight: bold;
      color: var(--primary-color);
  }
@@ -109,12 +119,12 @@
 
  .toggle {
      color: var(--toggle-color);
-     height: 32px;
-     width: 32px;
+     height: var(--font-laptop-icon);
+     width: var(--font-laptop-icon);
      background: var(--primary-color);
      border-radius: 20px;
      text-align: center;
-     font-size: 24px;
+     font-size: var(--font-laptop-title);
      position: absolute;
      right: -14px;
      top: 120px;
@@ -154,7 +164,7 @@
      justify-content: center;
      display: flex;
      color: var(--text-color);
-     transition: all 0.4s ease;
+     transition: all 0.1s ease;
      opacity: 1;
  }
 
@@ -174,7 +184,7 @@
  }
 
  .sider li .icon {
-     font-size: 20px;
+     font-size: var(--font-laptop-title);
      color: var(--text-color);
      min-width: 50px;
      height: 50px;
@@ -190,8 +200,10 @@
  .sider li .text {
      color: var(--text-color);
      transition: all 0.4 ease;
+     font-size: var(--font-laptop-text);
      opacity: 1;
      white-space: nowrap;
+     margin: 0 16px;
  }
 
  .sider li a {
@@ -217,14 +229,14 @@
  }
 
  .sider .mode .moon-sun {
-     height: 50px;
+     height: 100%;
      display: flex;
      align-items: center;
  }
 
  .sider .mode i {
      position: absolute;
-     font-size: 32px;
+     font-size: var(--font-laptop-title);
      left: 10%;
      color: var(--text-color);
      transition: all 0.4s ease;
@@ -236,6 +248,7 @@
 
 
  .sider .mode span {
+     font-size: 14px;
      color: var(--text-color);
      width: 50%;
      display: flex;
@@ -331,7 +344,66 @@
 
 
  @media only screen and (max-width: 1120px) {
+     .title {
+         font-size: var(--font-mobile-title);
+     }
+
      .sider {
          width: 512px;
      }
+
+     .toggle {
+         height: var(--font-mobile-icon);
+         width: var(--font-mobile-icon);
+         font-size: var(--font-mobile-title);
+         right: -32px;
+         top: 192px;
+     }
+
+     .sider .divider {
+
+         margin: 32px 64px;
+     }
+
+     .sider ul {
+
+         height: 800px;
+
+     }
+
+     .sider li {
+
+         height: 100px;
+
+     }
+
+     .sider li .icon {
+         font-size: var(--font-mobile-text);
+
+     }
+
+     .sider li .text {
+         font-size: var(--font-mobile-text);
+     }
+
+     .sider .mode {
+
+         height: 100px;
+     }
+
+     .sider .mode span {
+         font-size: 24px;
+     }
+
+     .sider .mode i {
+
+         font-size: var(--font-mobile-title);
+
+     }
+
+     .sider.close {
+         width: 100px;
+     }
+
+
  }
