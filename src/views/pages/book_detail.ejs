@@ -73,10 +73,16 @@
                                                 <div id="book-sales">
 
                                                     <span class="sub-title">Giá thành: </span>
-                                                    <span class="sub-content">
-                                                        <%= book.saleInfo.retailPrice.amount%>
-                                                            <%= book.saleInfo.retailPrice.currencyCode%>
-                                                    </span>
+                                                    <% if (book.saleInfo.saleability==="FREE" ) { %>
+                                                        <span class="sub-content">
+                                                            Miễn phí
+                                                        </span>
+                                                        <% } else { %>
+                                                            <span class="sub-content">
+                                                                <%= book.saleInfo.retailPrice.amount%>
+                                                                    <%= book.saleInfo.retailPrice.currencyCode%>
+                                                            </span>
+                                                            <% } %>
 
                                                 </div>
 

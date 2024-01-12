@@ -10,7 +10,7 @@
     transition: all .2s ease-in;
     height: 192px;
     color: var(--text-color);
-    min-width: 400px;
+    width: 350px;
 }
 
 .thumnail {
