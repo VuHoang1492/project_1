@@ -34,7 +34,11 @@
 
 }
 
-
+.not-found {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
 
 .loading {
     width: 100%;

@@ -34,14 +34,15 @@
     font-style: italic;
     font-size: var(--font-laptop-text);
     margin-right: 8px;
-    text-decoration: underline;
     transition: all .2s ease-in-out;
+    font-weight: 700;
 }
 
 .sub-content {
     font-size: var(--font-laptop-text);
     font-weight: 500;
     transition: all .2s ease-in-out;
+    font-weight: 700;
 }
 
 #book-title {
@@ -51,6 +52,7 @@
 }
 
 .book-description {
+    font-weight: 700;
     font-size: var(--font-latop-text);
     margin: 0 64px;
     padding: 32px;
@@ -63,6 +65,8 @@
     text-align: justify;
     transition: all .2s ease-in-out;
 }
+
+
 
 @media only screen and (max-width: 1120px) {
     .content {

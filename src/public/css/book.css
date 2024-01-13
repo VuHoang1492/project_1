@@ -49,12 +49,6 @@
     text-overflow: ellipsis;
 }
 
-.author-name:hover {
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
 .detail {
     color: inherit;
     transition: all .2s ease-in;
